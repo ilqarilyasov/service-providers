@@ -100,7 +100,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Service Providers" id="ayq-ZU-kUa">
-                        <barButtonItem key="rightBarButtonItem" title="Sort" id="yY0-j6-YBJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="yY0-j6-YBJ">
+                            <connections>
+                                <action selector="didSortServiceProviders:" destination="TmG-ie-8nE" id="w0G-Tb-FUK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOM-PW-Vry" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,13 +134,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WL2-qT-CwN">
                                         <rect key="frame" x="0.0" y="320" width="374" height="75"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izq-ja-dGC">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izq-ja-dGC">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-7t-LaZ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-7t-LaZ">
                                                 <rect key="frame" x="0.0" y="28.5" width="374" height="18"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                 <nil key="textColor"/>
@@ -167,15 +171,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wg4-Ye-hS6" firstAttribute="bottom" secondItem="DkR-dj-ugS" secondAttribute="bottom" constant="20" id="4G9-vH-kxU">
-                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
-                            </constraint>
+                            <constraint firstItem="Wg4-Ye-hS6" firstAttribute="bottom" secondItem="DkR-dj-ugS" secondAttribute="bottom" constant="20" id="4G9-vH-kxU"/>
                             <constraint firstItem="DkR-dj-ugS" firstAttribute="leading" secondItem="Wg4-Ye-hS6" secondAttribute="leading" constant="20" id="VSV-LW-kK6"/>
                             <constraint firstItem="Wg4-Ye-hS6" firstAttribute="trailing" secondItem="DkR-dj-ugS" secondAttribute="trailing" constant="20" id="e5Z-bo-lxz"/>
                             <constraint firstItem="DkR-dj-ugS" firstAttribute="top" secondItem="Wg4-Ye-hS6" secondAttribute="top" constant="30" id="vv4-SO-Gb1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wg4-Ye-hS6"/>
-                        <variation key="default">
+                        <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="4G9-vH-kxU"/>
                             </mask>

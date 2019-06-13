@@ -51,6 +51,52 @@
 }
 
 
+- (IBAction)didSortServiceProviders:(UIBarButtonItem *)sender {
+    UIAlertController *actionSheet = [UIAlertController
+                                alertControllerWithTitle:@"Sort Service Providers"
+                                message:nil
+                                preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *sortByName = [UIAlertAction
+                                 actionWithTitle:@"Sort by name"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action) {
+                                     NSLog(@"You pressed button one");
+                                     
+                                     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+                                     self.providers = [self.providers sortedArrayUsingDescriptors:@[sortDescriptor]];
+                                     
+                                                          }];
+    
+    UIAlertAction *sortByGrade = [UIAlertAction
+                                  actionWithTitle:@"Sort by grade"
+                                  style:UIAlertActionStyleDefault
+                                  handler:^(UIAlertAction * action) {
+                                      
+                                      NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"overallGrade" ascending:YES];
+                                      self.providers = [self.providers sortedArrayUsingDescriptors:@[sortDescriptor]];
+                                      
+                                                           }];
+    
+    UIAlertAction *sortByReviewCount = [UIAlertAction
+                                        actionWithTitle:@"Sort by review count"
+                                        style:UIAlertActionStyleDefault
+                                        handler:^(UIAlertAction * action) {
+                                            
+                                            NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"reviewCount" ascending:NO];
+                                            self.providers = [self.providers sortedArrayUsingDescriptors:@[sortDescriptor]];
+                                            
+                                                          }];
+    
+    [actionSheet addAction:sortByName];
+    [actionSheet addAction:sortByGrade];
+    [actionSheet addAction:sortByReviewCount];
+    
+    [self presentViewController:actionSheet animated:YES completion:nil];
+}
+
+
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
