@@ -94,7 +94,7 @@
         <!--Title-->
         <scene sceneID="K33-oi-8sF">
             <objects>
-                <viewController id="Sn9-tG-OuR" sceneMemberID="viewController">
+                <viewController id="Sn9-tG-OuR" customClass="ServiceProviderDetailViewController" customModule="ServiceProviders" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tk-Ma-vGn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,6 +166,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="KJc-yn-rwI"/>
+                    <connections>
+                        <outlet property="overallGradeLabel" destination="tKe-aF-fbN" id="czU-1T-RRO"/>
+                        <outlet property="reviewCountLabel" destination="q8y-PR-guM" id="Yxx-AE-x5G"/>
+                        <outlet property="serviceProviderAddressLabel" destination="yZP-7t-LaZ" id="qQ3-VD-frS"/>
+                        <outlet property="serviceProviderMapView" destination="2kO-N8-Erj" id="sbp-hQ-EkS"/>
+                        <outlet property="serviceProviderNameLabel" destination="Izq-ja-dGC" id="aVc-WJ-6da"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zq1-jt-cDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
