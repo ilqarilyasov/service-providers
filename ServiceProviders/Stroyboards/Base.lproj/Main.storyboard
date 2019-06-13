@@ -30,19 +30,26 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JME-cl-AOT">
                                             <rect key="frame" x="20" y="2" width="374" height="95.5"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="774-OT-IvC">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="774-OT-IvC">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="95.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OverallGrade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-gj-ZdG">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etf-P6-yUl">
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
-                                                            <color key="backgroundColor" red="0.025675824575973206" green="0.68188848350253806" blue="0.070301022879213929" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OverallGrade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-gj-ZdG">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="PgG-PM-XHf"/>
+                                                                <constraint firstAttribute="trailing" secondItem="I4z-gj-ZdG" secondAttribute="trailing" id="1Qe-pH-1Xj"/>
+                                                                <constraint firstAttribute="bottom" secondItem="I4z-gj-ZdG" secondAttribute="bottom" id="YeR-yR-Tzp"/>
+                                                                <constraint firstItem="I4z-gj-ZdG" firstAttribute="leading" secondItem="etf-P6-yUl" secondAttribute="leading" id="nua-Jz-W5l"/>
+                                                                <constraint firstItem="I4z-gj-ZdG" firstAttribute="top" secondItem="etf-P6-yUl" secondAttribute="top" id="qZF-Cd-ENz"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBG-jw-Xl6" userLabel="Space">
                                                             <rect key="frame" x="0.0" y="52" width="40" height="43.5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,6 +93,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="gradeBackgroundView" destination="etf-P6-yUl" id="g36-qd-RaJ"/>
                                     <outlet property="overallGradeLabel" destination="I4z-gj-ZdG" id="v16-Ss-pPb"/>
                                     <outlet property="reviewCountLabel" destination="OWN-uO-49A" id="MPa-a3-Y0d"/>
                                     <outlet property="serviceProviderAddressLabel" destination="os0-Ha-HAq" id="biF-b6-L39"/>
