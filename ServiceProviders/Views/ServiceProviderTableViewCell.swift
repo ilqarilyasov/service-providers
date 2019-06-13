@@ -18,17 +18,35 @@ class ServiceProviderTableViewCell: UITableViewCell {
     @IBOutlet weak var serviceProviderNameLabel: UILabel!
     @IBOutlet weak var serviceProviderAddressLabel: UILabel!
     
+    // MARK: - Properties
+    
+    @objc var provider: ServiceProvider? {
+        didSet { updateView() }
+    }
+    
+    
+    // MARK: - Update views
+    
     private func updateView() {
         guard let provider = provider else { return }
         
         overallGradeLabel.text = provider.overallGrade
         reviewCountLabel.text = "Review: \(provider.reviewCount)"
         serviceProviderNameLabel.text = provider.name
-        serviceProviderAddressLabel.text = "\(provider.city), \(provider.state)"
-    }
-    
-    @objc var provider: ServiceProvider? {
-        didSet { updateView() }
+        serviceProviderAddressLabel.text = provider.address
+        
+        updateGradeLabelColor(provider)
     }
 
+    private func updateGradeLabelColor(_ provider: ServiceProvider) {
+        if provider.overallGrade == "A" {
+            overallGradeLabel.backgroundColor = .green
+        } else if provider.overallGrade == "B" {
+            overallGradeLabel.backgroundColor = .blue
+        } else if provider.overallGrade == "C" {
+            overallGradeLabel.backgroundColor = .red
+        } else {
+            overallGradeLabel.backgroundColor = .gray
+        }
+    }
 }

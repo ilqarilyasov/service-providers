@@ -43,7 +43,7 @@ class ServiceProviderDetailViewController: UIViewController {
         
         title = provider.name
         serviceProviderNameLabel.text = provider.name
-        serviceProviderAddressLabel.text = "\(provider.city), \(provider.state)"
+        serviceProviderAddressLabel.text = provider.address
         reviewCountLabel.text = "Review: \(provider.reviewCount)"
         overallGradeLabel.text = "Grade: \(provider.overallGrade)"
         
@@ -58,7 +58,6 @@ class ServiceProviderDetailViewController: UIViewController {
         guard let lat = Double(provider.coordinates.latitude),
             let lon = Double(provider.coordinates.longitude) else { return }
         
-        // Zoom in
         zoomInToMap(lat, lon)
         
         // Add annotation
