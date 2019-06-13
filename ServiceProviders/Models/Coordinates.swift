@@ -10,7 +10,12 @@ import Foundation
 
 @objc (IIICoordinates)
 @objcMembers
-class Coordinates: NSObject,Codable {
+class Coordinates: NSObject, Decodable {
     let latitude: String
     let longitude: String
+    
+    init(latitude: String, longitude: String) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
 }
