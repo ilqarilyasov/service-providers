@@ -12,7 +12,7 @@
 @interface IIIServiceProvidersTableViewController ()
 
 @property (nonatomic,strong) IIIServiceAPI *serviceAPI;
-@property (nonatomic, strong) NSArray<IIIServiceProvider *> *providers;
+@property (nonatomic,strong) NSArray<IIIServiceProvider *> *providers;
 
 @end
 
@@ -109,7 +109,7 @@
     }
 }
 
-// MARK: - Properties
+#pragma mark - Setter
 
 - (void)setProviders:(NSArray<IIIServiceProvider *> *)providers
 {
