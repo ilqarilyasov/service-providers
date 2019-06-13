@@ -14,13 +14,13 @@
         <!--Service Providers-->
         <scene sceneID="KW6-3X-5ps">
             <objects>
-                <tableViewController id="TmG-ie-8nE" customClass="ServiceProvidersTableViewController" sceneMemberID="viewController">
+                <tableViewController id="TmG-ie-8nE" customClass="IIIServiceProvidersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8IK-1x-tQn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceProviderCell" rowHeight="100" id="Mdz-qG-xXW" customClass="ServiceProviderTableViewCell" customModule="ServiceProviders" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceProviderCell" rowHeight="100" id="Mdz-qG-xXW" customClass="IIIServiceProviderTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mdz-qG-xXW" id="8jG-QP-aVb">
@@ -30,30 +30,34 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JME-cl-AOT">
                                             <rect key="frame" x="20" y="2" width="374" height="95.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OverallGrade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-gj-ZdG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OverallGrade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-gj-ZdG">
                                                     <rect key="frame" x="0.0" y="0.0" width="100.5" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.025675824575973206" green="0.68188848350253806" blue="0.070301022879213929" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="PgG-PM-XHf"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fV8-Fq-KbT">
                                                     <rect key="frame" x="108.5" y="0.0" width="265.5" height="95.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="ReviewCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWN-uO-49A">
-                                                            <rect key="frame" x="0.0" y="0.0" width="265.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="265.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycQ-RS-TaF">
-                                                            <rect key="frame" x="0.0" y="28.5" width="265.5" height="45.5"/>
+                                                            <rect key="frame" x="0.0" y="22.5" width="265.5" height="50.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os0-Ha-HAq">
-                                                            <rect key="frame" x="0.0" y="82" width="265.5" height="13.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                            <rect key="frame" x="0.0" y="81" width="265.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -70,10 +74,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="overallGradeLabel" destination="I4z-gj-ZdG" id="Fuh-f9-10y"/>
-                                    <outlet property="reviewCountLabel" destination="OWN-uO-49A" id="hHk-zv-SKZ"/>
-                                    <outlet property="serviceProviderAddressLabel" destination="os0-Ha-HAq" id="6Jv-Ea-caK"/>
-                                    <outlet property="serviceProviderNameLabel" destination="ycQ-RS-TaF" id="7AB-sl-6SL"/>
+                                    <outlet property="overallGradeLabel" destination="I4z-gj-ZdG" id="v16-Ss-pPb"/>
+                                    <outlet property="reviewCountLabel" destination="OWN-uO-49A" id="MPa-a3-Y0d"/>
+                                    <outlet property="serviceProviderAddressLabel" destination="os0-Ha-HAq" id="biF-b6-L39"/>
+                                    <outlet property="serviceProviderNameLabel" destination="ycQ-RS-TaF" id="yeV-CA-2u1"/>
                                     <segue destination="Sn9-tG-OuR" kind="show" identifier="ShowProviderDetail" id="3zG-pp-CV2"/>
                                 </connections>
                             </tableViewCell>
@@ -94,7 +98,7 @@
         <!--Title-->
         <scene sceneID="K33-oi-8sF">
             <objects>
-                <viewController id="Sn9-tG-OuR" customClass="ServiceProviderDetailViewController" customModule="ServiceProviders" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Sn9-tG-OuR" customClass="IIIServiceProviderDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3tk-Ma-vGn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
