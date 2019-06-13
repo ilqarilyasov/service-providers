@@ -9,5 +9,5 @@
 import Foundation
 
 struct Service: Codable {
-    let serviceProviders: [ServiceProvider]
+    let serviceproviders: [ServiceProvider]
 }

@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct ServiceProvider: Codable {
+@objc (IIIServiceProvider)
+@objcMembers
+class ServiceProvider: NSObject, Codable {
     let city: String
     let coordinates: Coordinates
     let name: String

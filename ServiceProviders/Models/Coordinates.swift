@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct Coordinates: Codable {
+@objc (IIICoordinates)
+@objcMembers
+class Coordinates: NSObject,Codable {
     let latitude: String
     let longitude: String
 }
