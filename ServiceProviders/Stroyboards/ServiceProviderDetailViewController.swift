@@ -33,6 +33,9 @@ class ServiceProviderDetailViewController: UIViewController {
         updateViews()
     }
     
+    
+    // MARK: - Update views
+    
     private func updateViews() {
         
         guard isViewLoaded,
@@ -43,6 +46,36 @@ class ServiceProviderDetailViewController: UIViewController {
         serviceProviderAddressLabel.text = "\(provider.city), \(provider.state)"
         reviewCountLabel.text = "Review: \(provider.reviewCount)"
         overallGradeLabel.text = "Grade: \(provider.overallGrade)"
+        
+        addMapAnnotationFor(provider)
+    }
+    
+    
+    // MARK: - Update map view
+    
+    private func addMapAnnotationFor(_ provider: ServiceProvider) {
+        
+        guard let lat = Double(provider.coordinates.latitude),
+            let lon = Double(provider.coordinates.longitude) else { return }
+        
+        // Zoom in
+        zoomInToMap(lat, lon)
+        
+        // Add annotation
+        let annotation = MKPointAnnotation()
+        let centerCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        annotation.coordinate = centerCoordinate
+        annotation.title = "\(provider.name)"
+        serviceProviderMapView.addAnnotation(annotation)
+    }
+    
+    private func zoomInToMap(_ lat: Double, _ lon: Double) {
+        let location = CLLocation(latitude: lat, longitude: lon)
+        let radius: CLLocationDistance = 1000
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
+                                                  latitudinalMeters: radius * 2.0,
+                                                  longitudinalMeters: radius * 2.0)
+        serviceProviderMapView.setRegion(coordinateRegion, animated: true)
     }
 
 }
