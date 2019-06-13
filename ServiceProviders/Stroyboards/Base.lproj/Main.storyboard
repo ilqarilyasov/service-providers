@@ -11,33 +11,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Service Providers-->
         <scene sceneID="KW6-3X-5ps">
             <objects>
-                <tableViewController id="TmG-ie-8nE" sceneMemberID="viewController">
+                <tableViewController id="TmG-ie-8nE" customClass="ServiceProvidersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8IK-1x-tQn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProviderCell" rowHeight="102" id="Mdz-qG-xXW">
-                                <rect key="frame" x="0.0" y="28" width="414" height="102"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ServiceProviderCell" rowHeight="100" id="Mdz-qG-xXW" customClass="ServiceProviderTableViewCell" customModule="ServiceProviders" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mdz-qG-xXW" id="8jG-QP-aVb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="101.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="JME-cl-AOT">
-                                            <rect key="frame" x="20" y="2" width="374" height="97.5"/>
+                                            <rect key="frame" x="20" y="2" width="374" height="95.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="OverallGrade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-gj-ZdG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100.5" height="97.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="100.5" height="95.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fV8-Fq-KbT">
-                                                    <rect key="frame" x="108.5" y="0.0" width="265.5" height="97.5"/>
+                                                    <rect key="frame" x="108.5" y="0.0" width="265.5" height="95.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="ReviewCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWN-uO-49A">
                                                             <rect key="frame" x="0.0" y="0.0" width="265.5" height="20.5"/>
@@ -46,13 +46,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycQ-RS-TaF">
-                                                            <rect key="frame" x="0.0" y="28.5" width="265.5" height="47.5"/>
+                                                            <rect key="frame" x="0.0" y="28.5" width="265.5" height="45.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os0-Ha-HAq">
-                                                            <rect key="frame" x="0.0" y="84" width="265.5" height="13.5"/>
+                                                            <rect key="frame" x="0.0" y="82" width="265.5" height="13.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -70,6 +70,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="overallGradeLabel" destination="I4z-gj-ZdG" id="Fuh-f9-10y"/>
+                                    <outlet property="reviewCountLabel" destination="OWN-uO-49A" id="hHk-zv-SKZ"/>
+                                    <outlet property="serviceProviderAddressLabel" destination="os0-Ha-HAq" id="6Jv-Ea-caK"/>
+                                    <outlet property="serviceProviderNameLabel" destination="ycQ-RS-TaF" id="7AB-sl-6SL"/>
                                     <segue destination="Sn9-tG-OuR" kind="show" identifier="ShowProviderDetail" id="3zG-pp-CV2"/>
                                 </connections>
                             </tableViewCell>
@@ -79,7 +83,7 @@
                             <outlet property="delegate" destination="TmG-ie-8nE" id="l5I-xd-7J1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ayq-ZU-kUa">
+                    <navigationItem key="navigationItem" title="Service Providers" id="ayq-ZU-kUa">
                         <barButtonItem key="rightBarButtonItem" title="Sort" id="yY0-j6-YBJ"/>
                     </navigationItem>
                 </tableViewController>
@@ -165,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zq1-jt-cDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1775" y="115"/>
+            <point key="canvasLocation" x="1717" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lyV-oZ-h4T">
@@ -183,7 +187,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uk8-iG-ZR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68.115942028985515" y="114.50892857142857"/>
+            <point key="canvasLocation" x="172" y="115"/>
         </scene>
     </scenes>
 </document>
