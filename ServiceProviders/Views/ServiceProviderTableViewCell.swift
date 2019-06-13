@@ -17,7 +17,6 @@ class ServiceProviderTableViewCell: UITableViewCell {
     @IBOutlet weak var reviewCountLabel: UILabel!
     @IBOutlet weak var serviceProviderNameLabel: UILabel!
     @IBOutlet weak var serviceProviderAddressLabel: UILabel!
-    @IBOutlet weak var gradeBackgroundView: UIView!
     
     // MARK: - Properties
     
@@ -40,17 +39,18 @@ class ServiceProviderTableViewCell: UITableViewCell {
     }
 
     private func updateGradeLabelColor(_ provider: ServiceProvider) {
-        gradeBackgroundView.layer.cornerRadius = 10
         overallGradeLabel.textColor = .white
+        overallGradeLabel.layer.cornerRadius = overallGradeLabel.frame.width / 2
+        overallGradeLabel.layer.masksToBounds = true
         
         if provider.overallGrade == "A" {
-            gradeBackgroundView.backgroundColor = .green
+            overallGradeLabel.backgroundColor = .green
         } else if provider.overallGrade == "B" {
-            gradeBackgroundView.backgroundColor = .blue
+            overallGradeLabel.backgroundColor = .blue
         } else if provider.overallGrade == "C" {
-            gradeBackgroundView.backgroundColor = .red
+            overallGradeLabel.backgroundColor = .red
         } else {
-            gradeBackgroundView.backgroundColor = .gray
+            overallGradeLabel.backgroundColor = .gray
         }
     }
 }
