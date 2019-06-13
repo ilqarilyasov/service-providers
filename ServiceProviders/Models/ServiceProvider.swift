@@ -18,4 +18,8 @@ class ServiceProvider: NSObject, Codable {
     let postalCode: String
     let state: String
     let reviewCount: Int
+    
+    var address: String {
+        return "\(city), \(state) \(postalCode)"
+    }
 }
