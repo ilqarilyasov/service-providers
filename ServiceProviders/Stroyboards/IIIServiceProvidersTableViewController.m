@@ -54,7 +54,13 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if ([segue.identifier isEqualToString:@"ShowProviderDetail"]) {
+        IIIServiceProviderDetailViewController * detailVC = segue.destinationViewController;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        IIIServiceProvider *provider = self.providers[indexPath.row];
+        detailVC.provider = provider;
+    }
 }
 
 // MARK: - Properties
