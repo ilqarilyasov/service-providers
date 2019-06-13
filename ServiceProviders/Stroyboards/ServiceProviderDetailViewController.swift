@@ -41,10 +41,10 @@ class ServiceProviderDetailViewController: UIViewController {
         guard isViewLoaded,
             let provider = provider else { return }
         
-        title = provider.name
-        serviceProviderNameLabel.text = provider.name
+        title = provider.name.capitalized
+        serviceProviderNameLabel.text = provider.name.capitalized
         serviceProviderAddressLabel.text = provider.address
-        reviewCountLabel.text = "Review: \(provider.reviewCount)"
+        reviewCountLabel.text = "Reviews: \(provider.reviewCount)"
         overallGradeLabel.text = "Grade: \(provider.overallGrade)"
         
         addMapAnnotationFor(provider)

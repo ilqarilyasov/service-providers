@@ -31,8 +31,8 @@ class ServiceProviderTableViewCell: UITableViewCell {
         guard let provider = provider else { return }
         
         overallGradeLabel.text = provider.overallGrade
-        reviewCountLabel.text = "Review: \(provider.reviewCount)"
-        serviceProviderNameLabel.text = provider.name
+        reviewCountLabel.text = "\(provider.reviewCount) recent reviews"
+        serviceProviderNameLabel.text = provider.name.capitalized
         serviceProviderAddressLabel.text = provider.address
         
         updateGradeLabelColor(provider)
