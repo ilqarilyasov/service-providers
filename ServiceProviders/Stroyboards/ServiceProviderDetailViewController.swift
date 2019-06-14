@@ -31,6 +31,7 @@ class ServiceProviderDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateViews()
+        roundMapView()
     }
     
     
@@ -75,6 +76,11 @@ class ServiceProviderDetailViewController: UIViewController {
                                                   latitudinalMeters: radius * 2.0,
                                                   longitudinalMeters: radius * 2.0)
         serviceProviderMapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    private func roundMapView() {
+        serviceProviderMapView.layer.cornerRadius = 10
+        serviceProviderMapView.layer.masksToBounds = true
     }
 
 }
